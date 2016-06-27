@@ -22,6 +22,8 @@ calculator.js - This is the beginings of a simple calculator app. You are buildi
 
 calculator.test.js - These are your tests. In TDD the tests describe the behaviour of the app and prove that it works.
 
+This project uses the [Mocha](https://mochajs.org/#assertions) testing framework. Have a look at the Mocha documentation to understand the syntax for writing tests and the different kinds of assertions you can write. An assertion is simply a way to describe the expected behaviour for something when writing a test.
+
 ## Setup
 
 1. Fork this repository to your own github account (create one for free if you don't already have one).
@@ -75,9 +77,9 @@ Writing tests *first*, improve the add method so that it accepts any number of p
 
 ### 6. Use TDD to create a new method `addString`.
 
-Writing tests first and following the 3 rules above, write a new method `addString`. The behavior for this method is described below. Write small tests for each behaviour then make the test pass before writing another test. Go as far as you can and check in your code after each test and each time you pass a test.
+Writing tests first and following the 3 rules above, write a new method `addString`. 
 
-The `addString` method should work like this:
+The behaviours for this method are described below, but try not to read ahead just write tests for a behaviour and then make the test pass. Refactor your code as you go. Check in your code everytime you write a new test or make one pass.
 
 1. The method takes one parameter which should be a string.
 
@@ -87,9 +89,11 @@ The `addString` method should work like this:
     - Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
     - Remember to refactor after each passing test
 
-3. Improve the `addString` method to take an unknown number of numbers in the string separated by commas, e.g. `addString("1,2,3,4,5")` returns 15
+3. Improve the `addString` method to take an unknown number of numbers in the string separated by commas, e.g. `addString("1,2,3,4,5")` returns 15.
 
-4. If a number is negative, throw an exception "negatives not allowed".
+4. Allow the `addString` method to handle new lines between numbers (instead of commas). So "1,2,3" and "1\n2,3" are both OK. 
+
+5. If a number is negative, throw an exception "negatives not allowed".
 
 
 
